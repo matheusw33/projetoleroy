@@ -1,0 +1,91 @@
+.carrossel{
+    padding-top: 2rem;
+    position: relative;
+    height: 20rem;
+    max-width: 73.75;
+
+    @include for-phone-only(){
+        height: 15rem;
+    }
+
+    @include for-carrosel-medio(){
+        height: 13rem;
+    }
+    @include for-carrosel-pequeno(){
+        height: 10rem;
+    }
+
+    &_caixa{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &_btn{
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 45%;
+        transform: translate(-50%);
+        background-color: rgba(255, 255, 255, 0.336);
+        border-radius: 50%;
+        border: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        cursor: pointer;
+        z-index: 1000;        
+    }
+
+    &_btn-anterior{
+        left: 2rem;
+        background-image: url(../img/arrows-anterior.png);
+
+    }
+    &_btn-proximo{
+        right: 0rem;
+        background-image: url(../img/arrows-proximo.png);
+    }
+
+    &_slides{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: all .8s;
+    }
+
+    &_slides-item{
+        width: 100%;
+        height: 100%;
+    }
+
+    &_slide-link{
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+        
+    &_slides-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &_indicadores{
+        max-width: 8rem;
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &_indicadores-btn{
+        width: .5rem;
+        height:.5rem;
+        border-radius: 50%;
+        background-color: rgba(185, 185, 185, 0.336);
+        border: none;      
+        cursor: pointer;
+    }
+}

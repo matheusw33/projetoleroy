@@ -1,0 +1,30 @@
+.categorias{
+    width: 100%;
+
+    &_lista{
+        @include flx(flex-wrap, wrap);
+        gap: 1rem;
+        width: 100%;
+        @include for-table-only(){
+            gap: .4rem;
+        }
+    }
+
+    &_links{
+        @include for-table-only(){
+            width: 48%;
+        }
+    }
+
+    &_link{
+        width: 22rem;
+        height: 100%;   
+        @include for-table-only(){
+            width: 100%;
+        }     
+    }
+
+    &_img{
+        width: 100%;
+    }
+}

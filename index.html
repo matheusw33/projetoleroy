@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.jpg">
+    <title>Leroy Merlin - Construção, Acabamento e Decoração</title>    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho_caixa container">
+            <a href="#"><img class="cabecalho_logo-img" src="assets/img/logo.png" alt="" class="logo_img"></a>
+            <div class="cabecalho_container">
+                <div class="cabecalho_topbar">
+                    <ul class="cabecalho_topbar-lista">
+                        <li><a class="cabecalho_topbar-link" href="#">Rio de Janeiro</a></li>
+                        <li><a class="cabecalho_topbar-link" href="#">Compras pelo Telefone(Apenas vendas) 4007-1380</a></li>
+                        <li><a class="cabecalho_topbar-link" href="#">Duvidas?</a></li>
+                    </ul>
+                </div>
+                <div class="cabecalho_icones">
+                    <form class="cabecalho_icones">
+                    <input class="cabecalho_icones-pesquisa" type="search" placeholder="Digite aqui..">
+                    <button class="cabecalho_icone-botao"></button>
+                    </form> 
+
+                    <ul class="cabecalho_icones-lista">
+                        <li class="cabecalho_icones-itens">
+                            <a class="cabecalho_icones-link cabecalho_icones-carrinho" href="#">
+                                <span class="cabecalho_icones-span">Meu carrinho</span>
+                            </a>
+                        </li>
+
+                        <li class="cabecalho_icones-itens">
+                            <a class="cabecalho_icones-link cabecalho_icones-favoritos" href="#">
+                                <span class="cabecalho_icones-span">Lista de Favoritos</span>
+                            </a>
+                        </li>
+
+                        <li class="cabecalho_icones-itens">
+                            <a class="cabecalho_icones-link cabecalho_icones-conta" href="#">
+                                <span class="cabecalho_icones-span">Minha Conta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>       
+
+                <nav class="cabecalho_nav">
+                    <ul class="cabecalho_nav-lista">
+                        <li><a class="cabecalho_nav-link" href="#">Departamento</a></li>
+                        <li><a class="cabecalho_nav-link" href="#">Verão</a></li>
+                        <li><a class="cabecalho_nav-link" href="#">Tendências</a></li>
+                        <li><a class="cabecalho_nav-link" href="#">Ofertas</a></li>
+                        <li><a class="cabecalho_nav-link" href="#">Projetos</a></li>
+                        <li><a class="cabecalho_nav-link" href="#">Dicas</a></li>
+                        <li><a class="cabecalho_nav-link" href="#">Serviços</a></li>
+                        <li><a class="cabecalho_nav-link" href="#">Benefícios</a></li>
+                        <li><a class="cabecalho_nav-link cabecalho_nav-loja" href="#">Lojas abertas</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--BOTAO DO MENU-->
+            <div class="menu-caixa menu" aria-expanded="false" aria-haspopup="true" aria-controls="menu" aria-label="Abrir menu">
+                <div class="menu_botao"></div>
+            </div>
+        </div>    
+        <div class="cabecalho_wpp container">
+            <div class="cabecalho_wpp-container">
+                <a class="cabecalho_wpp-links icon-wpp" href="#">Clique aqui, compre pelo WhatsApp e receba em casa</a>
+                <a class="cabecalho_wpp-links barrinha" href="#"> (11) 4007-1380</a>
+            </div>
+        </div>          
+    </header>
+
+    <main>
+
+        <!--CARROSSEL DO SITE-->
+        <section class="carrossel container">
+            <div class="carrossel_caixa">
+                <button class="carrossel_btn carrossel_btn-anterior" data-anterior aria-label="Botão de voltar"></button>
+                <button class="carrossel_btn carrossel_btn-proximo" data-proximo  aria-label="Botão de avançar"></button>
+
+                <ul class="carrossel_slides slides" data-lista-img>
+                    <a href="#" class="carrossel_slide-link"><li class="carrossel_slides-item"><img class="carrossel_slides-img" src="assets/img/baner1.webp" alt="Seleção de produtos até 1.000 reais de desconto"></li></a>
+                    <a href="#" class="carrossel_slide-link"><li class="carrossel_slides-item"><img class="carrossel_slides-img" src="assets/img/baner2.webp" alt="Produtos para seu verão. Ventiladores, piscinas e etc. Até 30% de desconto"></li></a>
+                    <a href="#" class="carrossel_slide-link"><li class="carrossel_slides-item"><img class="carrossel_slides-img" src="assets/img/baner3.webp" alt="Programa de fidelidade leroy merlin"></li></a>                
+                </ul>      
+            
+                <div class="carrossel_indicadores" data-dots>
+                    <button class="carrossel_indicadores-btn carrossel_indicadores-ativo" data-indicador="0" aria-label="slider um"></button>
+                    <button class="carrossel_indicadores-btn" data-indicador="1" aria-label="slider dois"></button>
+                    <button class="carrossel_indicadores-btn" data-indicador="2"  aria-label="slider três"></button>
+                </div>
+            </div>
+            
+        </section>
+
+        <!--SEÇÃO DESTAQUES-->
+        <section class="destaques container">
+            <h4 class="destaques_titulo">Categorias em destaque</h4>
+            <ul class="destaques_lista">
+                <a class="destaques_links" href="#"><li class="destaques_item">Ar condicionados</li></a>
+                <a class="destaques_links" href="#"><li class="destaques_item">Cortinas</li></a>
+                <a class="destaques_links" href="#"><li class="destaques_item">Lustres e Pendentes</li></a>
+                <a class="destaques_links" href="#"><li class="destaques_item">Móveis para Jardim</li></a>
+                <a class="destaques_links" href="#"><li class="destaques_item">Tintas e Acessórios</li></a>
+            </ul>
+        </section>
+
+        <!--SEÇÃO CUPONS-->
+        <section class="cupons container">
+            <h4 class="cupons_titulo">Seleção de Oportunidades</h4>
+            <ul class="cupons_lista">
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom1.webp" alt="Seleção de Cupons">
+                    <p class="cupons_p">Seleção de cupons</p>
+                </li>
+    
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom2.webp" alt="Oportunidade">
+                    <p class="cupons_p">Oportunidade</p>
+                </li>
+    
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom3.webp" alt="Construção">
+                    <p class="cupons_p">Construção</p>
+                </li>
+    
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom4.webp" alt="Ventiladores">
+                    <p class="cupons_p">Ventiladores</p>
+                </li>
+    
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom5.webp" alt="Fidelidade">
+                    <p class="cupons_p">Fidelidade</p>
+                </li>
+    
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom2.webp" alt="Seleção de Cupons">
+                    <p class="cupons_p">Seleção de Cupons</p>
+                </li>
+    
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom3.webp" alt="Construção">
+                    <p class="cupons_p">Construção</p>
+                </li>
+    
+                <li class="cupons_item">
+                    <img class="cupons_img" src="assets/img/cupom4.webp" alt="Ventiladores">
+                    <p class="cupons_p">Ventiladores</p>
+                </li>
+            </ul>            
+        </section>
+
+        <!--SEÇÃO CARDS PROMOÇÕES-->
+        <section class="promocoes container">
+            <ul class="promocoes_lista">
+
+                <a href="" class="promocoes_link">
+                    <li class="promocoes_item"><img src="assets/img/promo1.webp" alt="renove sua decoração com 50% off" class="promocoes_img"></li>
+                </a>
+
+                <a href="" class="promocoes_link">
+                    <li class="promocoes_item"><img src="assets/img/promo2.webp" alt="Organização com até 40%OFF" class="promocoes_img"></li>
+                </a>
+
+                <a href="" class="promocoes_link">
+                    <li class="promocoes_item"><img src="assets/img/promo3.webp" alt="Área externa com até 40%OFF" class="promocoes_img"></li>
+                </a>
+
+                <a href="" class="promocoes_link">
+                    <li class="promocoes_item"><img src="assets/img/promo4.webp" alt="renove sua Sala com até 60%OFF" class="promocoes_img"></li>
+                </a>
+
+                <a href="" class="promocoes_link">
+                    <li class="promocoes_item"><img src="assets/img/promo1.webp" alt="renove sua decoração com 50% off" class="promocoes_img"></li>
+                </a>
+
+                <a href="" class="promocoes_link">
+                    <li class="promocoes_item"><img src="assets/img/promo2.webp" alt="Organização com até 40%OFF" class="promocoes_img"></li>
+                </a>
+            </ul>
+        </section>
+
+        <!--SEÇÃO PRODUTOS-->
+        <section class="produtos container">
+
+            <h4 class="produtos_titulo">Produtos que você pode gostar</h4>
+
+            <ul class="produtos_lista">
+
+                <div class="produtos_card">
+                    <img src="assets/img/tinta-produto.webp" alt="Tinta Acrílica Fosco Rende e Cobre Branco 20 Litros" class="produtos_img">
+                    <div class="produtos_card-container">
+                        <h5 class="produtos_titulo-card">Tinta Acrílica Fosco Rende e Cobre Branco 20L</h5>
+                        <div class="produtos_classificacao">
+                            <p class="produtos_codigo">cód:90263516</p>
+                            <div class="produtos_estrelas">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                            </div>
+                        </div>
+                         <span class="produtos_preco"><strong>R$ 379,90</strong></span>
+                    </div>                    
+                </div>
+
+                <div class="produtos_card">
+                    <img src="assets/img/tinta-produto2.webp" alt="Tinta Acrílica Fosco Rende Muito Branco Neve 3,6 Litros" class="produtos_img">
+                    <div class="produtos_card-container">
+                        <h5 class="produtos_titulo-card">Tinta Acrílica Fosco Rende Muito Branco Neve 3,6L</h5>
+                        <div class="produtos_classificacao">
+                            <p class="produtos_codigo">cód:90263516</p>
+                            <div class="produtos_estrelas">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                            </div>
+                        </div>
+                        <span class="produtos_preco"><strong>R$ 94,90</strong></span>
+                    </div>                    
+                </div>
+
+                <div class="produtos_card">
+                    <img src="assets/img/tinta-produto3.webp" alt="Tinta Acrílica Fosco Rende Muito Branco 20 litros" class="produtos_img">
+                    <div class="produtos_card-container">
+                        <h5 class="produtos_titulo-card">Tinta Acrílica Fosco Rende Muito Branco 20L</h5>
+                        <div class="produtos_classificacao">
+                            <p class="produtos_codigo">cód:90263516</p>
+                            <div class="produtos_estrelas">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                            </div>
+                        </div>
+                        <span class="produtos_preco"><strong>R$ 294,90</strong></span>
+                    </div>                    
+                </div>
+
+                <div class="produtos_card">
+                    <img src="assets/img/tinta-produto4.webp" alt="Tinta Acrílica Fosco Econômica Branco 3,6 Litros" class="produtos_img">
+                    <div class="produtos_card-container">
+                        <h5 class="produtos_titulo-card">Tinta Acrílica Fosco Econômica Branco 3,6L</h5>
+                        <div class="produtos_classificacao">
+                            <p class="produtos_codigo">cód:90263516</p>
+                            <div class="produtos_estrelas">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/star.png" alt="">
+                                <img src="assets/img/staroff.png" alt="">
+                                <img src="assets/img/staroff.png" alt="">
+                            </div>
+                        </div>
+                        <span class="produtos_preco"><strong>R$ 57,90</strong></span>
+                    </div>                    
+                </div>
+
+            </ul>
+        </section>
+
+        <section class="categorias container">
+            <ul class="categorias_lista">
+
+                <a href="" class="categorias_links">
+                    <li class="categorias_link"><img src="assets/img/categoria1.webp" alt="Vasos PALASH com até 30%OFF" class="categorias_img"></li>
+                </a>
+
+                <a href="" class="categorias_links">
+                    <li class="categorias_link"><img src="assets/img/categoria2.webp" alt="Madeiras e Acessórios para Cuidado" class="categorias_img"></li>
+                </a>
+
+                <a href="" class="categorias_links">
+                    <li class="categorias_link"><img src="assets/img/categoria3.webp" alt="Proteja sua Casa com até 20%OFF" class="categorias_img"></li>
+                </a>
+
+                <a href="" class="categorias_links">
+                    <li class="categorias_link"><img src="assets/img/categoria4.webp" alt="Limpeza da Casa com até 30%OFF" class="categorias_img"></li>
+                </a>
+
+                <a href="" class="categorias_links">
+                    <li class="categorias_link"><img src="assets/img/categoria5.webp" alt="Cortinas e Persianas a partir de R$34,90" class="categorias_img"></li>
+                </a>
+
+                <a href="" class="categorias_links">
+                    <li class="categorias_link"><img src="assets/img/categoria6.webp" alt="Filtros & Purificadores com até 20%OFF" class="categorias_img"></li>
+                </a>
+
+            </ul>
+        </section>
+
+        <!--SEÇÃO NOVIDADES-->
+        <section class="novidades container">
+            <div class="novidades_caixa">
+                <h4 class="novidades_titulo">Fique por dentro das <span class="cor_span">novidades</span> e <span class="cor_span">promoções</span></h4>
+                <form action="" class="novidades_form">
+                    <label class="novidades_label" for="email">E-mail</label><br>
+                    <input class="novidades_input" type="email" placeholder="Seuemail@email.com" nome="email">
+                    <button class="novidades_botao">Cadastrar</button>
+                </form>                
+            </div>
+        </section>
+    </main>    
+
+    <footer class="rodape container">
+
+        <ul class="rodape_lista sobre-mim">
+            <p class="rodape_titulo">Sobre mim</p>
+            <li class="rodape_item"><a href="#" class="rodape_link">Matheus Cruz</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">26 Anos</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">Rio de Janeiro</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">(21) 99703-0228</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">matheusw3314@gmail.com</a></li>
+        </ul>
+
+        <ul class="rodape_lista skills">
+            <p class="rodape_titulo">Skills</p>
+            <li class="rodape_item"><a href="#" class="rodape_link">HTML</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">CSS/SASS</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">JavaScript</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">Bootstrap</a></li>
+            <li class="rodape_item"><a href="#" class="rodape_link">Git & Github</a></li>
+        </ul>
+
+        <ul class="rodape_lista ultimos-projetos">
+            <p class="rodape_titulo">Ultimos Projetos</p>
+
+            <li class="rodape_item">
+                <a target="_blank" href="https://matheusw33.github.io/projetonike/" class="rodape_link">Projeto Nike</a>
+            </li>
+
+            <li class="rodape_item">
+                <a target="_blank" href="https://matheusw33.github.io/cursobootstrap/" class="rodape_link">Projeto Bootstrap</a>
+            </li>
+
+            <li class="rodape_item">
+                <a target="_blank" href="https://matheusw33.github.io/estudosmobilefirst/" class="rodape_link">Mobile First</a>
+            </li>
+
+            <li class="rodape_item">
+                <a target="_blank" href="https://matheus.horbiti.com.br/" class="rodape_link">Bakboo</a>
+            </li>
+        </ul>
+
+        <ul class="rodape_lista rodape_lista-social redes-sociais">
+            <p class="rodape_titulo">Redes Sociais</p>
+
+            <div class="rodape_lista-caixa">
+                <li class="rodape_item">
+                    <a target="_blank" href="https://www.instagram.com/rlxmts/" class="rodape_link rodape_link-social rodape_link-instagram"></a>
+                </li>
+
+                <li class="rodape_item">
+                    <a target="_blank" href="https://www.linkedin.com/in/matheuscruzw16/" class="rodape_link  rodape_link-social rodape_link-linkedin"></a>
+                </li>
+
+                <li class="rodape_item">
+                    <a target="_blank" href="https://github.com/matheusw33" class="rodape_link rodape_link-social rodape_link-github"></a>
+                </li>
+            </div>
+        </ul>
+    </footer>
+
+    <script src="assets/js/index.js" type="module"></script>
+    <script src="assets/js/menu.js"></script>
+    </body>
+</html>

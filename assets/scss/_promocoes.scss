@@ -1,0 +1,30 @@
+.promocoes{
+    width: 100%;    
+    padding: 2rem;
+
+    &_lista{
+        @include flx(flex-wrap, wrap);
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+        @include for-table-only(){
+            justify-content: center;
+        }
+    }
+
+    &_link{
+        width: 49%;
+        @include for-table-only(){
+            width: 48%;
+        }
+
+        @include for-phone-only(){
+            width: 100%;
+        }
+    }
+
+    &_img{
+        width: 100%;
+    }
+
+}

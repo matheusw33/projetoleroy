@@ -1,0 +1,68 @@
+.produtos{
+    width: 100%;
+    padding-bottom: 2rem;
+
+    &_titulo{
+        @include titulos;
+        margin-top: 2rem;
+    }
+
+    &_lista{
+        @include flx(flex-wrap, wrap);
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &_card{
+        @include flx(flex-direction, column);
+        width: 15.62rem;
+        height: 28rem;
+        border: solid 1px #dcdcdc;
+        border-bottom: 3px solid $cor-principal;        
+
+        @include for-table-only(){
+            width: 33%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        @include for-phone-only(){
+            width: 49%;
+        }
+    }
+
+    &_img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &_card-container{
+        height: 100%;
+        @include flx(flex-direction, column);
+        justify-content: space-between;
+        padding: .8rem;
+
+        @include for-phone-only(){
+            padding: .3rem;
+        }
+    }
+
+    &_titulo-card{
+        @include titulos-produtos;
+    }
+
+    &_codigo{
+        @include codigos-produtos;
+    }
+
+    &_preco{
+        font-size: 1.5rem;
+
+        &::after{
+            content: 'cada';
+            font-size: 1rem;
+            margin-left: .5rem;
+            font-weight: 600;
+        }
+    }
+}

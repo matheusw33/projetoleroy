@@ -1,0 +1,364 @@
+.cabecalho{
+    background-image: linear-gradient(to right , $branco 50%, $azul-escuro 50%);
+    overflow: hidden;
+
+    @include for-cabecalho-mobile(){
+        background-image: linear-gradient(to right , $branco 50%, $branco 50%);
+    }
+
+    
+
+    &_caixa{
+        @include flx(align-items, flex-end);
+        width: 100%;
+        z-index: 9999;
+
+        @include for-cabecalho-mobile{
+            padding-top: 1rem ;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &_logo-img{
+        width: 7rem;
+        padding-bottom: .7rem;
+        z-index: 9999;
+
+        @include for-cabecalho-mobile{
+            width: 4rem;
+        }
+    }
+
+    &_container{
+        @include flx(flex-direction, column);
+        gap: .7rem;
+        width: 100%;
+        background-color: $azul-escuro;  
+        margin-left: 5rem;
+        position: relative;        
+        z-index: 9999;
+
+        @include for-cabecalho-mobile{
+            display: block;
+            padding-bottom: 1rem;
+            margin-left: 0;
+            background-color: $branco;
+            position: initial;
+            align-items: center;
+            width: auto;
+        }
+
+        &::before{
+            content: "";
+            width: 10rem;
+            height: 15rem;
+            position: absolute;
+            bottom: 21px;
+            left: -108px;
+            background-color: #002639;
+            transform: rotate(-45deg);
+            z-index: -1;
+
+            @include for-cabecalho-mobile{
+                display: none;
+            }
+        }
+    }
+    &_topbar{        
+        z-index: 1000;
+        background-color: $preto;
+        position: relative;
+        height: 1.5625rem; 
+
+        @include for-cabecalho-mobile{
+            display: none;
+        }
+
+        &::before{
+            content: '';
+            background-color: $preto;
+            position: absolute;
+            height: 1.5625rem; 
+            width: 50%;
+            left: -11.8%;
+            transform: skew(45deg);
+            top: 0;
+            z-index: -1;
+        }
+
+        &::after{
+            content: '';
+            background-color: $preto;
+            position: absolute;
+            height: 1.5625rem; 
+            width: 100%;
+            right: -100%;
+            top: 0;
+        }
+    }
+
+    &_topbar-lista{
+        @include flx(justify-content, space-between);
+        width: 100%;         
+        z-index: 9999;
+    }
+
+    &_topbar-link{
+        color: $branco;
+        font-size: .7rem;        
+        z-index: 9999;
+    }
+
+    &_icones{
+        @include flx(align-items, center);   
+        z-index: 9999;
+
+        @include for-phone-only{
+            display: none;
+        }
+
+        @include for-cabecalho-mobile{
+            justify-content: space-between;
+        }
+    }    
+
+    &_icones-itens{
+        margin-left: 3rem;
+
+        @include for-table-only{
+            margin-left: 2rem;
+        }
+    }
+
+    &_icones-link{
+        color: $branco;
+        font-size: .7rem;
+        @include flx(flex-direction, column);
+        position: relative;
+
+        &::before{
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            left: -2.5rem;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: 2rem;
+            background-position: center;
+        }
+    }
+    &_icones-carrinho{
+        &::before{
+            background-image: url(../img/cart2.png);
+        }
+    }
+    &_icones-favoritos{
+        &::before{
+            background-image: url(../img/heart2.png);
+        }
+    }
+    &_icones-conta{
+        &::before{
+            background-image: url(../img/user2.png);
+        }
+    }
+
+    &_icones-pesquisa{
+        z-index: 9999;
+        width: 30rem;
+        height: 2.7rem;
+        padding: 1rem;
+        border: none;
+        border-radius: 8px 0 0 8px;
+
+        @include for-cabecalho-mobile{
+            border-top: 1px solid $cinza-claro;
+            border-bottom: 1px solid $cinza-claro;
+            border-left: 1px solid $cinza-claro;
+        }
+    }
+
+    &_icone-botao{
+        border: none;
+        border-radius: 0 8px 8px 0;
+        height: 2.7rem;
+        width: 2.7rem;
+        background-color: $cor-principal;
+        background-image: url(../img/iconspesquisar.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    &_icones-lista{
+        @include flx(align-items, center);
+        z-index: 9999;
+
+        @include for-cabecalho-mobile{
+            display: none;
+        }
+    }
+
+    &_nav-lista{
+        @include flx(align-items, center);
+        padding-bottom: .7rem;
+        padding-left: .5rem;
+        gap: 2rem;
+        z-index: 9999;
+
+        @include for-table-only{
+            gap: 1rem;
+        }
+        @include for-cabecalho-mobile{
+            flex-direction: column;
+            background-color: $azul-escuro;
+            width: 80vw;
+            height: calc(100vh - 4.5rem);
+            padding: 2rem;
+            position: absolute;
+            bottom: 0;
+            left: -80vw;
+            z-index: 10000;
+            transition: all .3s;
+            box-shadow: 200px 0px rgba(0, 0, 0, 0.356);
+            opacity: 0;
+        }
+    }
+
+    &_nav-link{
+        color: $branco;
+        font-size: .9rem;
+    }
+
+    &_nav-loja{
+        background-color: $verde-claro;
+        padding: .7rem .7rem .9rem .7rem;
+
+        @include for-cabecalho-mobile{
+            background-color: transparent;
+            padding: initial;
+        }
+    }
+
+    &_wpp{
+        background-color: $cor-principal;
+        width: 100%;
+        padding: .7rem 0;
+        padding-left: 2rem;        
+    }
+
+    &_wpp-container{
+        @include flx(justify-content, center);
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        @include for-phone-only{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &_wpp-links{
+        color: $branco;
+        position: relative;        
+    }
+}
+.icon-wpp{
+
+    &::before{
+        width: 1.5rem;
+        height: 1.5rem;
+        content: '';
+        background-image: url(../img/iconwhatsapp.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        left: -8%;
+        top: -9%;
+
+        @include for-phone-only{
+            display: none;
+        }
+    }
+}
+
+.barrinha{
+    &::before{
+        width: 1px;
+        height: 10px;
+        content: '';
+        background-color: $branco;
+        position: absolute;
+        left: -8%;
+        top: 7px;
+
+        @include for-phone-only{
+            display: none;
+        }
+    }
+}
+
+.menu {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #13293d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    left: -15rem;
+    margin-bottom: 1rem;
+  }
+  @media screen and (max-width: 990px) {
+    .menu {
+      opacity: 1;
+      position: static;
+    }
+  }
+  .menu_botao {
+    height: 2px;
+    width: 1rem;
+    background-color: #13293d;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+  .menu_botao::after {
+    content: "";
+    width: 1rem;
+    height: 2px;
+    background-color: #13293d;
+    position: absolute;
+    transform: translateY(-5px);
+    transition: all 0.5s;
+  }
+  .menu_botao::before {
+    content: "";
+    width: 1rem;
+    height: 2px;
+    background-color: #13293d;
+    position: absolute;
+    transform: translateY(5px);
+    transition: all 0.5s;
+  }
+  .menu_botao-ativo {
+    transform: translateX(-20px);
+    background-color: transparent;
+  }
+  .menu_botao-ativo::before {
+    transform: rotate(45deg) translate(0.9rem, -0.9rem);
+  }
+  .menu_botao-ativo::after {
+    transform: rotate(-45deg) translate(0.9rem, 0.9rem);
+  }
+  .menu-ativo{
+      left: 0;
+      opacity: 1;
+      
+  }

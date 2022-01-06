@@ -1,0 +1,32 @@
+.cupons{
+    @include flx(flex-direction, column);
+    gap: 1rem;
+
+    &_titulo{
+        @include titulos;
+    }
+
+    &_lista{
+        @include flx(flex-wrap, wrap);
+        gap: 1rem;
+    }
+    &_item{
+        @include flx(flex-direction, column);
+        align-items: center;
+        gap: .5rem;
+        width: 7.5rem;
+        margin-bottom: 2rem;
+
+        @include for-phone-only(){
+            width: 47%;
+        }
+
+    }
+    &_img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    &_p{
+        @include fontes-lista;
+    }
+}

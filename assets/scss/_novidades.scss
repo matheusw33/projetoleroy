@@ -1,0 +1,74 @@
+.novidades{
+    &_caixa{
+        @include flx(justify-content, center);
+        align-items: center;
+        background-image: url(../img/cart.svg);
+        background-position: initial;
+        background-repeat: no-repeat;
+        background-size: 7rem;
+        background-color: $azul-escuro;
+        border-radius: 10px;
+        padding: 2rem 1rem;
+        margin: 3rem 0;
+        gap: 1rem;
+
+        @include for-phone-only(){
+            flex-direction: column;
+        }
+    }
+
+    &_titulo{
+        color: $branco;
+        width: 22%;
+        font-size: 1.2rem;
+
+        @include for-phone-only(){
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &_form{
+        width: 70%;
+
+        @include for-phone-only(){
+            width: 100%;
+        }
+    }   
+
+    &_label{
+        color: $branco;
+        font-size: .7rem;
+    }
+
+    &_input{
+        width: 80%;
+        padding: .5rem;
+        height: 3rem;
+        border-radius: 10px;
+        border: none;
+
+        @include for-table-only(){
+            width: 70%;
+        }
+        @include for-phone-only(){
+            width: 100%;
+            margin-bottom: .5rem;
+        }
+    }
+
+    &_botao{
+        background-color: $cor-principal;
+        color: $branco;
+        font-weight: 600;
+        font-size: .9rem;
+        width: 7rem;
+        height: 3rem;
+        border: none;
+        border-radius: 10px;
+
+        @include for-phone-only(){
+            width: 100%;
+        }
+    }
+}

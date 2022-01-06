@@ -1,0 +1,56 @@
+.rodape{
+    @include flx(flex-wrap, wrap);
+    gap: 8rem;
+    border-top: solid 1px #dcdcdc ;
+    background-color: #F8F8F8;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include for-phone-only(){
+        gap: 1rem;
+    }
+
+    &_titulo{
+        @include titulos-produtos;
+        margin-bottom: 1rem;
+    }
+
+    &_link{
+        color: $cinza-claro;
+        font-size: .8rem;
+
+        &:hover{
+            color: $cor-principal;
+        }
+    }
+
+    &_lista{
+        min-width: 10.25rem;
+    }
+
+    &_lista-caixa{
+        @include flx(gap, 1rem);
+    }
+
+    &_link-social{
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 2rem;
+    }
+
+    &_link-instagram{
+        
+        background-image: url(../img/icons-instagram.svg);
+    }
+    &_link-linkedin{
+        
+        background-image: url(../img/icons-linkedin.svg);
+    }
+    &_link-github{
+        
+        background-image: url(../img/icons-github.svg);
+    }
+}
